@@ -70,6 +70,8 @@ jobs:
             type=raw,value=latest,enable={{is_default_branch}}
             # use tag as label
             type=ref,event=tag
+            # 保存历史版本
+            type=sha,format=short
             # avoid tagging as nightly
             type=schedule,enable=false
 
