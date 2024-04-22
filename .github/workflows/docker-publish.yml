@@ -37,7 +37,7 @@ jobs:
       # 使用 Docker Buildx 构建多平台镜像  
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
-        
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
@@ -60,7 +60,7 @@ jobs:
       # 提取 Docker 元数据，为 Docker 镜像打标签
       - name: Extract Docker metadata
         id: meta
-        uses: docker/metadata-action@v4.0.1
+        uses: docker/metadata-action@v5
         with:
           images: |
             ${{ env.DOCKER_HUB_USER }}/usql
